@@ -2,7 +2,7 @@ from playwright.sync_api import sync_playwright, Playwright, expect
 
 def test_open_homepage_mobile_iPhone13(playwright: Playwright):
     iphone_13 = playwright.devices['iPhone 13']
-    browser = playwright.webkit.launch(headless=False)
+    browser = playwright.webkit.launch(headless=True)
     context = browser.new_context(**iphone_13)
     page = context.new_page()
     page.goto("https://ovcharski.com/shop/")
@@ -12,7 +12,7 @@ def test_open_homepage_mobile_iPhone13(playwright: Playwright):
 
 def test_open_homepage_mobile_GalaxyS9(playwright: Playwright):
     galaxy_s9 = playwright.devices['Galaxy S9+']
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch(headless=True)
     context = browser.new_context(**galaxy_s9)
     page = context.new_page()
     page.goto("https://ovcharski.com/shop/")
