@@ -48,7 +48,11 @@ Stop pytest immediately after encountering the first failed test, aiding in isol
 ```bash
 pytest --exitfirst
 ```
-Save test results as a JUnit XML file (useful for documentation or reporting):
+Save test results as a HTML file:
+```bash
+pytest --html=report.html
+```
+Save test results as a JUnit XML file:
 ```bash
 pytest --junit-xml test-results/report.xml
 ```
